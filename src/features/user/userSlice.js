@@ -12,19 +12,24 @@ const slice = createSlice({
     },
     login: (state, action) => {
       const user = state.users.filter(
-        (user) => user.username === action.payload.username
+        (user) =>
+          user.username === action.payload.username &&
+          user.password === action.payload.password
       );
       if (!user) {
-        console.log("no such user");
+        console.log("no such user/authentication failed");
         return;
       }
-      if (user.password === action.payload.password) {
-        state.userLoggedIn = user;
-      }
+      state.userLoggedIn = action.payload.username;
+    },
+    logout: (state) => {
+      state.userLoggedIn = false;
     },
   },
 });
 
 export default slice.reducer;
 
-export const { signup, login } = slice.actions;
+export const { signup, login, logout } = slice.actions;
+
+export const loggedInUserSelector = (state) => state.users.userLoggedIn;

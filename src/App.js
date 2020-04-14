@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import EmployerDetail from "./components/EmployerDetails";
 import Login from "./features/user/Login";
 import Signup from "./features/user/Signup";
+import EmployeeView from "./features/user/EmployeeView";
 
 // import logo from './logo.svg';
 // import { Counter } from './features/counter/Counter';
@@ -21,6 +22,7 @@ function App() {
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
           <Route path="/org/:name" component={EmployerDetail} />
+          <Route path="/employeeview" component={EmployeeView} />
         </Switch>
       </Router>
       <Footer />

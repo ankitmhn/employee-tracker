@@ -25,14 +25,18 @@ const Signup = () => {
         placeholder="Username"
         value={username}
         onChange={onUserNameChange}
+        className="bg-white mx-2 px-2 text-black placeholder-gray-400"
       ></input>
       <input
         type="password"
         placeholder="Password"
         value={password}
+        className="bg-white mx-2 px-2 text-black placeholder-gray-400"
         onChange={onPasswordChange}
       ></input>
-      <button onClick={onSignup}>Signup</button>
+      <button className="px-2 py-3 rounded-lg" onClick={onSignup}>
+        Signup
+      </button>
     </div>
   );
 };
