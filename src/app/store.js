@@ -1,8 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { configureStore } from "@reduxjs/toolkit";
+import employerReducer from "../features/employers/employersViewSlice";
+// import counterReducer from '../features/counter/counterSlice';
 
 export default configureStore({
   reducer: {
-    counter: counterReducer,
+    // counter: counterReducer,
+    employers: employerReducer,
   },
 });
