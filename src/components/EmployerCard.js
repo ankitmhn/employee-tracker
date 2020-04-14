@@ -9,7 +9,7 @@ const EmployerCard = (props) => {
     return currentStaffStrength;
   };
   return (
-    <div className="shadow-lg m-4 p-2 min-w-lg" onClick={props.onClick}>
+    <div className="shadow-lg m-4 p-2 max-w-sm" onClick={props.onClick}>
       {props.org.orgName}
       <div>{calculateStaffStrength()}</div>
     </div>
