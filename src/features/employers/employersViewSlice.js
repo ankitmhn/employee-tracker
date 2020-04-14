@@ -9,4 +9,4 @@ const slice = createSlice({
 
 export default slice.reducer;
 // export const {} = slice.actions;
-export const employerSelector = (state) => state.employers.orgs;
+export const employerSelector = (state) => state.employers;

@@ -1,14 +1,18 @@
-{
-  "orgs": {
-    "MegaSoft": {
-      "JAN-2020": ["emp1", "emp2", "emp3"],
-      "FEB-2020": ["emp1", "emp2", "emp3"],
-      "MAR-2020": ["emp1", "emp2", "emp3"]
-    },
-    "Orange Computers": {
-      "JAN-2020": ["emp4", "emp5", "emp6"],
-      "FEB-2020": ["emp4", "emp5", "emp6"],
-      "MAR-2020": ["emp4", "emp5", "emp6"]
-    }
+[
+  {
+    "orgName": "MegaSoft",
+    "employeeList": [
+      { "month": "JAN 2020", "list": ["emp1", "emp2", "emp3"] },
+      { "month": "FEB 2020", "list": ["emp1", "emp2", "emp3"] },
+      { "month": "MAR 2020", "list": ["emp1", "emp2", "emp3"] }
+    ]
+  },
+  {
+    "orgName": "Orange Computer",
+    "employeeList": [
+      { "month": "JAN 2020", "list": ["emp4", "emp5", "emp6"] },
+      { "month": "FEB 2020", "list": ["emp1", "emp2", "emp3"] },
+      { "month": "MAR 2020", "list": ["emp1", "emp2", "emp3"] }
+    ]
   }
-}
+]

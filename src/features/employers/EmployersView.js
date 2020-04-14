@@ -1,18 +1,20 @@
 import React from "react";
 import { useSelector } from "react-redux";
-// import { employerSelector } from "./employersViewSlice";
+import { employerSelector } from "../employers/employersViewSlice";
+import EmployerCard from "../../components/EmployerCard";
 
 const EmployersView = () => {
-  const employers = useSelector((state) => {
-    const list = [];
-    for (const org in state.employers.orgs) list.push(org);
-    return list;
-  });
+  const employers = useSelector(employerSelector);
+  console.log(employers);
 
-  return employers.map((name) => {
+  return employers.map((org) => (
     // console.log(name);
-    return <h3 key={name}>{name}</h3>;
-  });
+    <EmployerCard
+      org={org}
+      key={org.orgName}
+      onClick={() => console.log(org.orgName)}
+    ></EmployerCard>
+  ));
 };
 
 export default EmployersView;
